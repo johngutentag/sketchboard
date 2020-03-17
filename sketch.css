@@ -1,0 +1,37 @@
+.header {
+    text-align: center;
+    font-size: xx-large;
+    margin: 15px;
+}
+
+.button {
+    display: inline-block;
+    width: 90px;
+}
+
+.buttonContainer {
+    float:left;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.fill {
+    background-color: black;
+}
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    height: 750px;
+    width: 750px;
+    border: 2px solid black;
+    
+}
+
+.box {
+    border: 1px solid black;
+}
