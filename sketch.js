@@ -1,6 +1,6 @@
 let container = document.querySelector('.container');
 
-function colorChange() {
+function colorChange() { //Basic White and Black Color Scheme
     let boxes = document.querySelectorAll('div.box');
     boxes.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
@@ -9,11 +9,10 @@ function colorChange() {
     });    
 }
 
-function createGrid(gridNumber) {
+
+function createGrid(gridNumber) { //Creates new grid to fill container with input of side size
     container.style.gridTemplateColumns = "repeat(" + gridNumber + ", 1fr)";
     container.style.gridTemplateRows = "repeat(" + gridNumber + ", 1fr)";
-    // document.getElementsByClassName('.container').style.gridTemplateColumns = "repeat(" + gridNumber + ", 1fr)";
-    // document.getElementsByClassName('.container').style.gridTemplateRows = "repeat(" + gridNumber + ", 1fr)";
     let totalBoxes = gridNumber ** 2;
     for (let i = 0; i < totalBoxes; i++) {
         const newDiv = document.createElement('div');
@@ -24,7 +23,7 @@ function createGrid(gridNumber) {
 }
 
 
-function reset() {
+function reset() { //Deletes grid and calls on createGrid to start fresh
     let container = document.querySelector('.container');
     let boxes = document.querySelectorAll('div.box');
     for (let i = (boxes.length-1); i >= 0 ; i--) {
@@ -34,12 +33,12 @@ function reset() {
     createGrid(x);
 }
 
-function generateRandomColor() {
+function generateRandomColor() { //Generates random color which is used in rainbow function
     let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     return randomColor;
 }
 
-function rainbow() {
+function rainbow() { //Rainbow color scheme where each mouseover changes the box to a random color
     reset();
     let boxes = document.querySelectorAll('div.box');
     boxes.forEach((div) => {
@@ -50,7 +49,7 @@ function rainbow() {
 
 }
 
-function grayscale() {
+function grayscale() { //Each mouseover makes the box 10% darker going from solid white to solid black
     reset();
     let boxes = document.querySelectorAll('div.box');
     boxes.forEach((div) => {

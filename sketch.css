@@ -17,10 +17,6 @@
     margin-bottom: 30px;
 }
 
-.fill {
-    background-color: black;
-}
-
 .container {
     margin: 0 auto;
     display: grid;
